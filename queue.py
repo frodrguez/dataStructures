@@ -10,19 +10,23 @@ class Queue:
         self.elements.append(value)
 
     def dequeue(self):
-        self.elements.pop(0)
+        return self.elements.pop(0)
 
     def peek(self):
         return self.elements[0]
 
+    def is_empty(self):
+        return self.elements == []
+
 
 # Testing:
-q = Queue()
-q.enqueue(7)
-q.enqueue(8)
-q.enqueue(9)
-q.enqueue(10)
+if __name__ == '__main__':
+    q = Queue()
+    q.enqueue(7)
+    q.enqueue(8)
+    q.enqueue(9)
+    q.enqueue(10)
 
-print(q.peek())  # [7,8,9,10], so it prints 7
-q.dequeue()      # 7 <--[8,9,10]
-print(q.peek())  # [8,9,10], so it prints 8
+    print(q.peek())  # [7,8,9,10], so it prints 7
+    print(q.dequeue())      # 7 <--[8,9,10]
+    print(q.peek())  # [8,9,10], so it prints 8
