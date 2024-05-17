@@ -106,5 +106,5 @@ graph.add_edge(node_2, node_6)
 #  7---4---5   8
 # BFS: starting at node 1, the first nodes encountered are its neighbors 3 and 7, then their neighbors 2 and 4, then 5 and 6 and finally 8.
 # DFS: starting at node 1, finds all nodes in the closed loop 1,3,2,5,4,7 and then it backtraces until nodes 6 and 8 are discovered.
-print(graph.depth_first_search(node_1))    # [1, 3, 2, 5, 4, 7, 6, 8]
 print(graph.breadth_first_search(node_1))  # [1, 3, 7, 2, 4, 5, 6, 8]
+print(graph.depth_first_search(node_1))    # [1, 3, 2, 5, 4, 7, 6, 8]
