@@ -16,17 +16,19 @@ class Stack:
         self.elements.pop()
 
     def peek(self):
-        return self.elements[len(self.elements) - 1]
+        if not self.is_empty():
+            return self.elements[len(self.elements) - 1]
 
     def is_empty(self):
         return self.elements == []
 
 
 # Testing:
-s = Stack()
-for idx in range(10):
-    s.push(idx)
-print(s.peek())  # 9
-s.pop()  # bye 9
-s.pop()  # bye 8
-print(s.peek())  # 7
+if __name__ == '__main__':
+    s = Stack()
+    for idx in range(10):
+        s.push(idx)
+    print(s.peek())  # 9
+    s.pop()  # bye 9
+    s.pop()  # bye 8
+    print(s.peek())  # 7
